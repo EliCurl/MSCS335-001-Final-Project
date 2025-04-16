@@ -1,0 +1,1 @@
+Pokemon dataset : https://www.kaggle.com/datasets/vishalsubbiah/pokemon-images-and-types?select=images
