@@ -34,7 +34,7 @@ if __name__ == '__main__':
     nz = 100
     ngf = 64
     ndf = 64
-    num_epochs = 100
+    num_epochs = 150
     lr = 0.0002
     beta1 = 0.5
     ngpu = 0
