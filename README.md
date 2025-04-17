@@ -1,8 +1,16 @@
-Pokemon dataset : https://www.kaggle.com/datasets/vishalsubbiah/pokemon-images-and-types?select=images
-Combined with : https://www.kaggle.com/datasets/christofferms/pokemon-with-stats-and-image?select=images
+GAN Resources:
+Pytorch
+https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html
 
-Secondary set of pokemon : https://www.kaggle.com/datasets/hlrhegemony/pokemon-image-dataset
+DATASETS:
+Pokemon dataset
+https://www.kaggle.com/datasets/vishalsubbiah/pokemon-images-and-types?select=images
+https://www.kaggle.com/datasets/christofferms/pokemon-with-stats-and-image?select=images
 
-Emoji dataset: https://www.kaggle.com/datasets/waqi786/emoji-trends-dataset
+Secondary set of pokemon
+https://www.kaggle.com/datasets/hlrhegemony/pokemon-image-dataset
+
+Emoji dataset
+https://www.kaggle.com/datasets/waqi786/emoji-trends-dataset
 
 
