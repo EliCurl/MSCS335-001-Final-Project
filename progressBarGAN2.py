@@ -14,9 +14,10 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from IPython.display import HTML
 import multiprocessing
+from tqdm import tqdm  # <- Added for progress bar
 
 if __name__ == '__main__':
-    multiprocessing.freeze_support()  # Optional for Windows executable support
+    multiprocessing.freeze_support()
 
     manualSeed = 999
     print("Random Seed: ", manualSeed)
@@ -24,7 +25,6 @@ if __name__ == '__main__':
     torch.manual_seed(manualSeed)
     torch.use_deterministic_algorithms(True)
 
-    #dataroot = r"C:\\Users\\sahling5225\\pokemon"
     dataroot = r"C:\\Users\\sahling5225\\pokemon2"
 
     workers = 2
@@ -34,10 +34,10 @@ if __name__ == '__main__':
     nz = 100
     ngf = 64
     ndf = 64
-    num_epochs = 50
+    num_epochs = 100
     lr = 0.0002
     beta1 = 0.5
-    ngpu = 0 #my laptop doesnt have a gpu
+    ngpu = 0
 
     dataset = dset.ImageFolder(root=dataroot,
                                transform=transforms.Compose([
@@ -139,7 +139,8 @@ if __name__ == '__main__':
 
     print("Starting Training Loop...")
     for epoch in range(num_epochs):
-        for i, data in enumerate(dataloader, 0):
+        pbar = tqdm(enumerate(dataloader, 0), total=len(dataloader), desc=f"Epoch {epoch+1}/{num_epochs}")
+        for i, data in pbar:
             netD.zero_grad()
             real_cpu = data[0].to(device)
             b_size = real_cpu.size(0)
@@ -167,10 +168,12 @@ if __name__ == '__main__':
             D_G_z2 = output.mean().item()
             optimizerG.step()
 
-            if i % 50 == 0:
-                print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f'
-                      % (epoch, num_epochs, i, len(dataloader),
-                         errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
+            pbar.set_postfix({
+                'Loss_D': f'{errD.item():.4f}',
+                'Loss_G': f'{errG.item():.4f}',
+                'D(x)': f'{D_x:.4f}',
+                'D(G(z))': f'{D_G_z1:.4f} / {D_G_z2:.4f}'
+            })
 
             G_losses.append(errG.item())
             D_losses.append(errD.item())
