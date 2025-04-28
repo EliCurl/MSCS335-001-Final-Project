@@ -14,3 +14,5 @@ Emoji dataset
 https://www.kaggle.com/datasets/waqi786/emoji-trends-dataset
 
 
+Current Dataset : Cartoon Faces
+https://www.kaggle.com/datasets/brendanartley/cartoon-faces-googles-cartoon-set?select=cartoonset100k_jpg
