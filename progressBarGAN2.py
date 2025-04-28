@@ -14,27 +14,38 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from IPython.display import HTML
 import multiprocessing
-from tqdm import tqdm  # <- Added for progress bar
+from tqdm import tqdm
 
 if __name__ == '__main__':
     multiprocessing.freeze_support()
 
-    manualSeed = 999
+    manualSeed = 999 #random starting points :999 initially chosen : actual number doesnt matter
     print("Random Seed: ", manualSeed)
     random.seed(manualSeed)
     torch.manual_seed(manualSeed)
     torch.use_deterministic_algorithms(True)
 
-    dataroot = r"C:\\Users\\sahling5225\\pokemon2"
+    dataroot = r"C:\\Users\\sahling5225\\cartoon_faces"
 
-    workers = 2
+#--------------------image size 500x500 : final trainings ----------------------
+    #image_size = 512
+    #batch_size = 16
+    #nz = 256
+    #ngf = 128
+    #ndf = 128
+    #num_epochs = 50
+    #workers = 4
+    #lr = 0.0002
+    #beta1 = 0.5
+#-------------------if reducing to 64x64 for quick samples-----------------------
+    workers = 4
     batch_size = 128
     image_size = 64
     nc = 3
     nz = 100
     ngf = 64
     ndf = 64
-    num_epochs = 150
+    num_epochs = 25
     lr = 0.0002
     beta1 = 0.5
     ngpu = 0
