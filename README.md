@@ -1,3 +1,9 @@
+1) video of results
+2) explain learning rates
+3) explain parameters
+
+
+
 GAN Resources:
 Pytorch
 https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html
