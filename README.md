@@ -58,10 +58,18 @@ With more time, it would be interesting to see how using a Wasserstein GAN (WGAN
 
 ### Sources
 Dataset : Cartoon Faces : https://www.kaggle.com/datasets/brendanartley/cartoon-faces-googles-cartoon-set?select=cartoonset100k_jpg
+
 Content Resources:
+
 https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html
+
 https://medium.com/@dnyaneshwalwadkar/generative-adversarial-network-gan-simplegan-dcgan-wgan-progan-c92389a3c454 ​
+
 https://developers.google.com/machine-learning/gan/discriminator ​
+
 https://medium.com/@danushidk507/understanding-dcgans-deep-convolutional-generative-adversarial-networks-1984bc028bf8 ​
+
 https://en.wikipedia.org/wiki/Generative_adversarial_network#:~:text=A%20generative%20adversarial%20network%20(GAN,his%20colleagues%20in%20June%202014.​
+
 https://medium.com/@sanjithkumar986/inductive-bias-in-deep-learning-1-17a7c3f35381
+
