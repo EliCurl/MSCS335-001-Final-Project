@@ -13,7 +13,7 @@ Discriminator (D): Classifies images as real (from the dataset) or fake (from th
 These networks are trained to "compete" with each out. The Generator tries to trick the Discriminator, while the Discriminator tries to correctly identify real and fake images.
 
 ### Dataset
-The dataset itself was trained on the image below, and each image was processed with a resizing to be 256x256 instead of 500x500, center cropped, and normalized to pixel values of [-1,1].
+The dataset itself was trained on the images, such as the set below, and each image was processed with a resizing to be 256x256 instead of 500x500, center cropped, and normalized to pixel values of [-1,1].
 ![Figure_1 1](https://github.com/user-attachments/assets/1a725693-8a5b-446e-bd66-3e663a22b4a6)
 
 ### Parameters Used
