@@ -1,4 +1,7 @@
 # DCGAN Cartoon Face Image Generator
+By Curtis Eng, Gabriel Sahlin, Elias Curl, Austin Foltz
+
+
 This project was to build and implement a Deep Convolutional Generative Adversarial Network (DCGAN) to generate cartoon face images. The network is trained on a dataset of cartoon faces, and learns to produce new cartoon faces from random noise vectors.
 
 The DCGAN consists of two neural networks:
